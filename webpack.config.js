@@ -16,7 +16,6 @@ var config = {
 	output: {
 		filename: 'bundle.js',
 		path: path.join(__dirname, '/build'),
-		// sourceMapFilename: 'bundle.map',
 		publicPath: '/'
 	},
 
@@ -33,7 +32,8 @@ var config = {
 			},
 			{
 				test: /\.(jpe?g|png|gif|svg)$/i,
-				loader: 'file-loader?name=resources/images/[name].[ext]'
+				loader: 'file-loader?name=./assets/images/[name].[ext]',
+				exclude: /node_modules/
 			}
 
 		]
@@ -57,7 +57,8 @@ var config = {
 		compress: true, 
 		port: 8000,
 		watchContentBase: true,
-		overlay: false
+		overlay: false,
+		historyApiFallback: true
 	},
 
     stats: {

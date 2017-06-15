@@ -6,7 +6,7 @@ class ProductTable extends Component {
 		return (
 			<div className="ProductTable">
 				<div className="title">
-					<h1>Select A product</h1>
+					<h1>Select Your Eyewear</h1>
 					<ProductListContainer />
 				</div>
 			</div>

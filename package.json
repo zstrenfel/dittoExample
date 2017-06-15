@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --env=dev"
+    "start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -36,9 +36,11 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "history": "^4.6.2",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
     "redux": "^3.6.0"
   }
 }
