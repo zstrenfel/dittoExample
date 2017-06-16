@@ -13,9 +13,25 @@ const defaultProps = {
 }
 
 class ProductList extends Component {
+	constructor(props) {
+		super(props);
+		this.handleSelectProduct = this.handleSelectProduct.bind(this);
+	}
+	handleSelectProduct(productId) {
+		const { selectProduct } = this.props;
+		console.log('selected', productId)
+		selectProduct(productId)
+	}
 	renderProducts() {
-		const { products } = this.props;
-		return products.map(p => <Product {...p} key={p.id} />)
+		const { products, selected } = this.props;
+		console.log('selected', selected);
+		return products.map(p => {
+			return <Product {...p} 
+				key={p.id} 
+				selected={selected === p.id} 
+				onClick={this.handleSelectProduct}
+			/>
+		})
 	}
 	render() {
 		return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom'
 import configureStore from './redux/configureStore';
 import App from './components/App';
 import createHistory from 'history/createBrowserHistory'
@@ -17,7 +17,9 @@ console.log("store state", store.getState())
 const render = (Component) => {
 	ReactDOM.render(
 		<Provider store={store}>
-			<Component />
+			<BrowserRouter >
+				<Component />
+			</BrowserRouter>
 		</Provider>,
 		document.getElementById('react-root')
 	)		

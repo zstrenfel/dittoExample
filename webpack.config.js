@@ -34,6 +34,11 @@ var config = {
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				loader: 'file-loader?name=./assets/images/[name].[ext]',
 				exclude: /node_modules/
+			}, 
+			{
+				test: /\.(eot|svg|ttf|woff|woff2)$/,
+				loader: 'file-loader?name=./assets/fonts/[name].[ext]',
+				exclude: /node_modules/
 			}
 
 		]

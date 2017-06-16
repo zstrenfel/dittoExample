@@ -1,0 +1,13 @@
+.Header {
+	@extend .col-8;
+	border-bottom: 1px solid gray;
+	
+	font-family: 'Montserrat Bold', Helvetica;
+
+	a {
+		color: #000;
+		text-align: center;
+		text-decoration: none;
+	}
+	
+}

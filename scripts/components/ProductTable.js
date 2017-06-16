@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ProductListContainer from '../containers/ProductListContainer';
 
+
+
 class ProductTable extends Component {
 	render() {
 		return (

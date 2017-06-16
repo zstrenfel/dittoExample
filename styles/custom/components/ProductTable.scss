@@ -1,5 +1,5 @@
 .ProductTable {
-	@make-column(12);
+	@extend .col-8;
 
 	text-align: center;
 }

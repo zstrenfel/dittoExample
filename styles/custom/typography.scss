@@ -1,0 +1,18 @@
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url('../assets/web-fonts/Montserrat-Bold-webfont.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Montserrat Light';
+	src: url('../assets/web-fonts/Montserrat-Light.ttf') format('truetype');
+}
+
+body, text, p, label {
+	font-family: 'Montserrat Light';
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat Bold';
+	margin: 10px 0;
+}

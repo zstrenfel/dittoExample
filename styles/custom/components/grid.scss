@@ -1,0 +1,70 @@
+.container {
+	width: 100%;
+	max-width: 1200px;
+}
+
+.container:before,
+.container:after,
+.row:before,
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.row,
+.col {
+	box-sizing: border-box;
+}
+
+.col {
+	box-sizing: border-box;
+	float: left;
+	width: 12.5%;
+	margin-right: 12.5%; 
+}
+
+.col-1 {
+	width: 12.5%;
+	float: left;
+}
+
+.col-2 {
+	width: 25%;
+	float: left;
+}
+
+.col-3 {
+	width: 37.5;
+	float: left;
+}
+
+.col-4 {
+	width: 50%;
+	float: left;
+}
+
+.col-8 {
+	width: 100%;
+	float: left;
+}
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    background: red;
+    width: 12.5%;
+}
+
+[class*='col-'] {
+	margin-left: 12.5%;
+}
+
+[class*='col-']:first-of-type {
+    margin-left: 0;
+}
+
+
+
+
+

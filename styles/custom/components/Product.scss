@@ -1,5 +1,5 @@
 .Product {
-	@include make-col(3);
+	@extend .col-2;
 	padding: 10px 30px;
 	box-sizing: border-box;
 
@@ -20,5 +20,13 @@
 	.product-brand {
 		font-weight: bold;
 		font-size: 16px;
+	}
+
+	&.selected {
+		border: 2px solid lighten(gray, 10%);
+	}
+
+	+ .Product {
+		margin-left: 12.5%;
 	}
 }

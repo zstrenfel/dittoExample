@@ -1,0 +1,62 @@
+.SizeFormInput {
+	@extend .col-8;
+
+	box-sizing: border-box;
+	padding: 5px 10px;
+
+	.control {
+		font-size: 18px;
+		position: relative;
+		display: block;
+		margin-bottom: 15px;
+		padding-left: 30px;
+		cursor: pointer;
+		color: gray;
+
+		input {
+			position: absolute;
+			z-index: -1;
+			opacity: 0;
+		}
+
+		.control-indicator {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			background: #fff;
+			border: 3px solid #000;
+			border-radius: 50%;
+
+			&:after {
+				position: absolute;
+				display: none;
+				content: '';
+			}
+		}
+
+		input:focus ~ .control-indicator,
+		.control-indicator:focus {
+			@extend .focus-state;
+		}
+		&:hover input ~ .control-indicator {
+			background: darken(#fff, 5%);
+		} 
+
+		input:checked ~ .control-indicator {
+			background: #fff;
+
+			&:after  {
+				display: block;
+				top: 3px;
+				left: 3px;
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #000;
+			}	
+		}
+	}
+}
+

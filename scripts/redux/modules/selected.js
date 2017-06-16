@@ -20,7 +20,7 @@ const reducer = (state="", action) => {
 		case SELECT_PRODUCT: 
 			const { payload } = action; 
 			const { productId } = payload; 
-			return payload;
+			return productId;
 		default: 
 			return state;
 	}

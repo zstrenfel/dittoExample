@@ -1,0 +1,45 @@
+.ProductDetail {
+	width: 100%;
+	text-align: center;
+	font-family: 'Montserrat Light';
+
+	.gallery {
+		@extend .row;
+
+		img {
+			@extend .col-4;
+		}
+	}
+
+	span {
+		display: block;
+		margin: 10px;
+
+		&.product-price {
+			font-weight: bold;
+		}
+	}
+
+	div.product-detail-body {
+		@extend .row;
+		box-sizing: border-box;
+		padding: 10px 20px;
+	}
+
+	div.product-description {
+		@extend .col-4;
+		
+		box-sizing: border-box;
+		font-weight: 300;
+		padding: 0 20px;
+		text-align: left;
+	}
+
+	div.select-size {
+		@extend .col-4;
+	}
+
+	.footer {
+		margin-top: 60px;
+	}
+}
