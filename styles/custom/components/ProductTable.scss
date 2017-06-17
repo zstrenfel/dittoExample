@@ -1,5 +1,5 @@
 .ProductTable {
-	@extend .col-8;
+	@include grid-col(8);
 
 	text-align: center;
 }

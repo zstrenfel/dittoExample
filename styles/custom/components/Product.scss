@@ -1,10 +1,19 @@
 .Product {
-	@extend .col-2;
+	@include grid-col(2);
 	padding: 10px 30px;
 	box-sizing: border-box;
 
 	&:hover  {
 		border: 2px solid lighten(gray, 30%);
+	}
+
+	&.selected {
+		border: 2px solid lighten(gray, 10%);
+	}
+
+	a {
+		text-decoration: none;
+		color: #000;
 	}
 
 	img {
@@ -26,11 +35,5 @@
 		font-size: 16px;
 	}
 
-	&.selected {
-		border: 2px solid lighten(gray, 10%);
-	}
 
-	+ .Product {
-		margin-left: 12.5%;
-	}
 }

@@ -7,9 +7,11 @@ import Main from './Main';
 
 function App(){
 	return (
-		<div className="App" id="container">	
+		<div className="App">	
 			<Header />
-			<Main />
+			<div id="container">
+				<Main />
+			</div>
 		</div>
 	)
 }

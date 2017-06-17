@@ -1,0 +1,60 @@
+$col-size: 5.73%;
+$margin-size: 5.73%;
+
+@mixin container {
+	width: 100%;
+	max-width: 1200px;
+	margin: auto;
+
+	&:before,
+	&:after {
+		content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+
+
+@mixin grid-col($columns, $gutters: 0, $shift: 0) {
+	box-sizing: border-box;
+	float: left;
+	width: ($col-size * $columns) + ($margin-size * ($columns - 1));
+	margin-left: $margin-size * ($shift + 1);
+
+	&:first-of-type {
+		// margin-left: 0;
+	}
+}
+
+@mixin grid-row() {
+	width: 100%;
+	box-sizing: border-box;
+
+	&:before, 
+	&:after {
+		content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+
+
+[class*='col-'] {
+    float: left;
+    min-height: 1px;
+    background: red;
+    width: 12.5%;
+}
+
+[class*='col-'] {
+	margin-left: 12.5%;
+}
+
+[class*='col-']:first-of-type {
+    margin-left: 0;
+}
+
+
+
+
+

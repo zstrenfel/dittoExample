@@ -1,5 +1,5 @@
 .SizeFormInput {
-	@extend .col-8;
+	@include grid-col(8);
 
 	box-sizing: border-box;
 	padding: 5px 10px;

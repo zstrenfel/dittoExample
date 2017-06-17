@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 
 const propTypes = {
 	label: PropTypes.string.isRequired,
-	onClick: PropTypes.func.isRequired,
+	name: PropTypes.string.isRequired,
+	onChange: PropTypes.func.isRequired,
 	value: PropTypes.string.isRequired
 }
 
-function SizeFormInput({ label, value, name, onChange }) {
+function SizeFormInput({ label, name, onChange, value }) {
 	return (
 		<div className="SizeFormInput">
 			<label className="control">
@@ -18,5 +19,7 @@ function SizeFormInput({ label, value, name, onChange }) {
 		</div>
 	)
 }	
+
+SizeFormInput.propTypes = propTypes;
 
 export default SizeFormInput;
