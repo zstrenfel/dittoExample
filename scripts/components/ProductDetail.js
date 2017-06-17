@@ -18,7 +18,7 @@ class ProductDetail extends Component {
 	render() {
 		const { brand, description, images, name, price, id } = this.props;
 		return (
-			<div className="ProductDetail">
+			<div className="ProductDetail" style={{position: 'absolute', margin: 'auto'}}>
 				<div className="gallery">
 					<img src={`../..${images.frontal}`} alt={`${name}-front-view`} className="img-front"/>
 					<img src={`../..${images.side}`} alt={`${name}-side-view`} className="img-side"/>
