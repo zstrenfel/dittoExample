@@ -1,9 +1,9 @@
-$col-size: 5.73%;
-$margin-size: 5.73%;
+$col-size-lg: 5.73%;
+$margin-size-lg: 5.73%;
 
 @mixin container {
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1100px;
 	margin: auto;
 
 	&:before,
@@ -14,16 +14,11 @@ $margin-size: 5.73%;
 	}
 }
 
-
-@mixin grid-col($columns, $gutters: 0, $shift: 0) {
+@mixin grid-col($columns, $margin: $margin-size-lg, $shift: 0) {
 	box-sizing: border-box;
 	float: left;
-	width: ($col-size * $columns) + ($margin-size * ($columns - 1));
-	margin-left: $margin-size * ($shift + 1);
-
-	&:first-of-type {
-		// margin-left: 0;
-	}
+	width: ($col-size-lg * $columns) + ($margin * ($columns - 1));
+	margin-left: $margin * ($shift + 1);
 }
 
 @mixin grid-row() {
@@ -37,23 +32,6 @@ $margin-size: 5.73%;
 	    clear: both;
 	}
 }
-
-
-[class*='col-'] {
-    float: left;
-    min-height: 1px;
-    background: red;
-    width: 12.5%;
-}
-
-[class*='col-'] {
-	margin-left: 12.5%;
-}
-
-[class*='col-']:first-of-type {
-    margin-left: 0;
-}
-
 
 
 

@@ -6,6 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import configureStore from './redux/configureStore';
 import App from './components/App';
 import createHistory from 'history/createBrowserHistory'
+import 'normalize.css';
 import '../styles/main.scss';
 
 

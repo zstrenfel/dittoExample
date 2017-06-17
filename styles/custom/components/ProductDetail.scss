@@ -2,6 +2,7 @@
 	width: 100%;
 	text-align: center;
 	font-family: 'Montserrat Light';
+	font-size: 18px;
 
 	.gallery {
 		@include grid-row();
@@ -30,9 +31,11 @@
 		@include grid-col(4);
 		
 		box-sizing: border-box;
+		font-size: 18px;
 		font-weight: 300;
 		padding: 0 20px;
 		text-align: left;
+		-webkit-font-smoothing: antialiased;
 	}
 
 	div.select-size {
@@ -41,5 +44,21 @@
 
 	.footer {
 		margin-top: 60px;
+
+		h3 {
+			font-size: 24px;
+		}
+	}
+
+	@media (max-width: 800px) {
+
+		.gallery img {
+			@include grid-col(8);
+		}
+
+		div.product-description,
+		div.select-size {
+			@include grid-col(8);
+		}
 	}
 }

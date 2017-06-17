@@ -2,4 +2,11 @@
 	@include grid-col(8);
 
 	text-align: center;
+	h1 {
+		font-size: 72px;
+		margin: {
+			bottom: 60px;
+			top: 20px;
+		}
+	}
 }
