@@ -3,8 +3,9 @@ import { selectProduct } from '../redux/modules/selected';
 import ProductList from '../components/ProductList';
 
 
-const mapStateToProps = (state) => {
-	const { category, products: allProducts, selected } = state;
+const mapStateToProps = (state, ownProps) => {
+	const { category, products: allProducts } = state;
+	const { selected } = ownProps;
 	const products = category in allProducts ? allProducts[category] : [];
 	return {
 		products,

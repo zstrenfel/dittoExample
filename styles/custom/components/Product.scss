@@ -3,6 +3,10 @@
 	padding: 10px 30px;
 	box-sizing: border-box;
 
+	&:hover  {
+		border: 2px solid lighten(gray, 30%);
+	}
+
 	img {
 		max-width: 100%;
 		max-height: 100%;

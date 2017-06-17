@@ -4,7 +4,7 @@ import ProductTable from './ProductTable';
 import ProductDetailContainer from '../containers/ProductDetailContainer';
 
 
-function Main({ selected }) {
+function Main({}) {
 	return (
 		<main>
 			<Switch>

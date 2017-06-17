@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { buyProduct } from '../redux/modules/selected';
+import { purchaseProduct } from '../redux/modules/purchase';
 import SizeForm from '../components/SizeForm';
 import { getProduct } from '../utils/ProductUtils';
 
@@ -11,13 +11,15 @@ const mapStateToProps = (state, ownProps) => {
 	const { price, 'sku-id': skuId, sizes } = product;
 	return {
 		price, 
-		'sku-id': skuId,
+		skuId,
 		sizes
 	}
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return {}
+	return {
+		purchaseProduct: (product) => dispatch(purchaseProduct(product))
+	}
 }
 
 export default connect(

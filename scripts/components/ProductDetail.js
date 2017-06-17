@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import _ from 'lodash';
 import DOMPurify from 'dompurify';
 import SizeFormContainer from '../containers/SizeFormContainer';
 import ProductListContainer from '../containers/ProductListContainer'
 
 const propTypes = {
-
+	brand: PropTypes.string.isRequired, 
+	description: PropTypes.string.isRequired,
+	images: PropTypes.object.isRequired,
+	name: PropTypes.string.isRequired,
+	price: PropTypes.string.isRequired,
+	id: PropTypes.string.isRequired
 }
 
 class ProductDetail extends Component {
 	render() {
-		const { product } = this.props;
-		const { brand, description, images, name, price, id } = product;
+		const { brand, description, images, name, price, id } = this.props;
 		return (
 			<div className="ProductDetail">
 				<div className="gallery">
@@ -33,11 +38,13 @@ class ProductDetail extends Component {
 				</div>
 				<div className="footer">
 					<h3>Select Your Eyewear</h3>
-					<ProductListContainer />
+					<ProductListContainer selected={id} />
 				</div>
 			</div>
 		)
 	}
 }
+
+ProductDetail.propTypes = propTypes;
 
 export default ProductDetail;

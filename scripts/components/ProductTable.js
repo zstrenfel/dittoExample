@@ -3,17 +3,15 @@ import ProductListContainer from '../containers/ProductListContainer';
 
 
 
-class ProductTable extends Component {
-	render() {
-		return (
-			<div className="ProductTable">
-				<div className="title">
-					<h1>Select Your Eyewear</h1>
-					<ProductListContainer />
-				</div>
+function ProductTable({}) {
+	return (
+		<div className="ProductTable">
+			<div className="title">
+				<h1>Select Your Eyewear</h1>
+				<ProductListContainer />
 			</div>
-		)
-	}
+		</div>
+	)
 }
 
 export default ProductTable;
