@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import ProductListContainer from '../containers/ProductListContainer';
 
-
-
-function ProductTable({}) {
+function ProductTable() {
 	return (
 		<div className="ProductTable" >
 			<div className="title">

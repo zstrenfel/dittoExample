@@ -1,7 +1,6 @@
 const eyewear = require('./eyewear.json');
 
-console.log('eyewear', eyewear);
-const config =  {
+const initialStore =  {
 	'category': 'eyewear',
 	'products': eyewear,
 	'selected': "",
@@ -12,4 +11,4 @@ const config =  {
 	}
 }
 
-export default config;
+export default initialStore;

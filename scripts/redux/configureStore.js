@@ -6,7 +6,6 @@ import products from './modules/products';
 import selected from './modules/selected';
 import purchase from './modules/purchase';
 
-
 const loggerMiddleware = createLogger();
 const createStoreWithMiddleware = applyMiddleware(loggerMiddleware, thunk)(createStore)
 
@@ -19,4 +18,5 @@ function reducer(state={}, action) {
 }
 
 const configureStore = initialState => createStoreWithMiddleware(reducer, initialState);
+
 export default configureStore;

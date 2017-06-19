@@ -1,10 +1,14 @@
 .ProductDetail {
-	// width: 100%;
-	position: absolute;
-	margin: auto;
-	text-align: center;
 	font-family: 'Montserrat Light';
 	font-size: 18px;
+	left: 0;
+	right: 0;
+	margin: {
+		left: auto;
+		right: auto;
+	} 
+	position: absolute;
+	text-align: center;
 
 	.gallery {
 		@include grid-row();

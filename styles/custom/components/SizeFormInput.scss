@@ -3,37 +3,37 @@
 
 	box-sizing: border-box;
 	font-size: 14px;
-	padding: 10px 0;
 	margin-left: 0;
+	padding: 10px 0;
 
 	.control {
-		position: relative;
+		color: gray;
+		cursor: pointer;
 		display: block;
 		margin-bottom: 15px;
 		padding-left: 30px;
-		cursor: pointer;
-		color: gray;
-
+		position: relative;
+		
 		input {
+			opacity: 0;
 			position: absolute;
 			z-index: -1;
-			opacity: 0;
 		}
 
 		.control-indicator {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 16px;
-			height: 16px;
 			background: #fff;
 			border: 3px solid lighten(#000, 30%);
 			border-radius: 50%;
+			height: 16px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 16px;
 
 			&:after {
-				position: absolute;
 				display: none;
 				content: '';
+				position: absolute;
 			}
 		}
 
@@ -41,6 +41,7 @@
 		.control-indicator:focus {
 			@extend .focus-state;
 		}
+
 		&:hover input ~ .control-indicator {
 			background: darken(#fff, 5%);
 		} 
@@ -49,13 +50,13 @@
 			background: #fff;
 
 			&:after  {
-				display: block;
-				top: 3px;
-				left: 3px;
-				width: 10px;
-				height: 10px;
 				border-radius: 50%;
 				background: lighten(#000, 30%);
+				display: block;
+				height: 10px;
+				left: 3px;
+				top: 3px;
+				width: 10px;
 			}	
 		}
 	}

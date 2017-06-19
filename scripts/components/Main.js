@@ -4,8 +4,7 @@ import { RouteTransition } from 'react-router-transition';
 import ProductTable from './ProductTable';
 import ProductDetailContainer from '../containers/ProductDetailContainer';
 
-
-function Main({}) {
+function Main() {
 	return (
 		<main>
 			<Route render={({ location, history, match }) => {

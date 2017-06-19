@@ -15,12 +15,8 @@ const defaultProps = {
 class ProductList extends Component {
 	renderProducts() {
 		const { products, selected } = this.props;
-		console.log('selected', selected);
 		return products.map(p => {
-			return <Product {...p} 
-				key={p.id} 
-				selected={selected === p.id} 
-			/>
+			return <Product {...p} key={p.id} selected={selected === p.id} />
 		})
 	}
 	render() {

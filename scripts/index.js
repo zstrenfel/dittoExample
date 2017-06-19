@@ -9,11 +9,10 @@ import createHistory from 'history/createBrowserHistory'
 import 'normalize.css';
 import '../styles/main.scss';
 
-
-import config from './constants/config';
+import initialStore from './constants/initialStore';
 
 const history = createHistory();
-const store = configureStore(config);
+const store = configureStore(initialStore);
 
 console.log("store state", store.getState())
 const render = (Component) => {

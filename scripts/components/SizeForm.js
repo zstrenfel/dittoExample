@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import _ from 'lodash';
-
 import SizeFormInput from './SizeFormInput';
 
-
 const propTypes = {
-	'price': PropTypes.string.isRequired,
-	'skuId': PropTypes.string.isRequired,
-	'sizes': PropTypes.array.isRequired,
-	'purchaseProduct': PropTypes.func.isRequired
+	price: PropTypes.string.isRequired,
+	purchaseProduct: PropTypes.func.isRequired,
+	skuId: PropTypes.string.isRequired,
+	sizes: PropTypes.array.isRequired
 }
 
 class SizeForm extends Component {
@@ -30,7 +28,7 @@ class SizeForm extends Component {
 			'product-price': price,
 			'product-sku-size': skuSize,
 			'product-sku-id': skuId,
-			'purchase-datatime': Date().toISOString()
+			'purchase-datatime': new Date().toISOString()
 		}
 		purchaseProduct(productInfo);
 	}
@@ -55,7 +53,7 @@ class SizeForm extends Component {
 		return (
 			<form onSubmit={this.handlePurchaseProduct} className="SizeForm">
 				<h3>Select Size</h3>
-				{this.renderOptions()}
+				{ this.renderOptions() }
 				<button className="buy-now">BUY NOW</button>
 			</form>
 		)

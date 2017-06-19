@@ -1,8 +1,13 @@
 .ProductTable {
-	@include grid-col(8);
+	left: 0;
+	right: 0;
+	margin: {
+		left: auto;
+		right: auto;
+	} 
 	position: absolute;
-	margin: auto;
 	text-align: center;
+	
 	h1 {
 		font-size: 72px;
 		margin: {
