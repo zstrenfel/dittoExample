@@ -39,6 +39,7 @@ export function handlePurchaseFailure(response) {
 	}
 }
 
+//uses thunk middleware to dispatch multiple actions. 
 export function purchaseProduct(product) {
 	return dispatch => {
 		dispatch(requestBuyProduct());

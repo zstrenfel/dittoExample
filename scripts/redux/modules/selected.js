@@ -1,4 +1,4 @@
-import { SELECT_PRODUCT, BUY_PRODUCT } from '../../constants/ActionTypes';
+import { SELECT_PRODUCT } from '../../constants/ActionTypes';
 
 //actions
 export function selectProduct(productId) {
@@ -8,10 +8,6 @@ export function selectProduct(productId) {
 			productId
 		}
 	}
-}
-
-export function buyProduct(productId) {
-	//todo
 }
 
 //reducers
@@ -26,6 +22,4 @@ const reducer = (state="", action) => {
 	}
 }
 
-// const reducer = (state={}, action) => {
-// }
 export default reducer

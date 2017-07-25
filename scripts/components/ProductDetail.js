@@ -20,8 +20,8 @@ class ProductDetail extends Component {
 		return (
 			<div className="ProductDetail" style={{position: 'absolute', margin: 'auto'}}>
 				<div className="gallery">
-					<img src={`../..${images.frontal}`} alt={`${name}-front-view`} className="img-front"/>
-					<img src={`../..${images.side}`} alt={`${name}-side-view`} className="img-side"/>
+					<img src={`../..${images.frontal}`} alt={`${name} front view`} className="img-front"/>
+					<img src={`../..${images.side}`} alt={`${name} side view`} className="img-side"/>
 				</div>
 				
 				<h1>{_.startCase(brand)}</h1>
